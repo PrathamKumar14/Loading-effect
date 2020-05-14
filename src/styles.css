@@ -1,0 +1,15 @@
+body {
+  background-color: #fff;
+  color: #6d3c9d;
+  overflow: hidden;
+}
+
+.container {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 250px;
+}
+
+.loading {
+  font-size: 5rem;
+}
