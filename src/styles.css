@@ -1,13 +1,17 @@
 body {
   background-color: #fff;
-  color: #6d3c9d;
   overflow: hidden;
+  color: #6d3c9d;
 }
 
 .container {
   font-family: sans-serif;
   text-align: center;
   margin-top: 250px;
+}
+
+.loading {
+  font-size: 5rem;
 }
 
 .loading span:nth-of-type(2) {
@@ -68,21 +72,22 @@ body {
   animation-delay: 0.95s;
 }
 
-.loading {
-  font-size: 5rem;
-}
-
 .loading span {
   display: inline-block;
-  color: #6d3c9d;
   opacity: 0;
   transform: translate(200px, -100px) scale(2);
-  animation: ballDrop 1s forwards;
+  animation: ballDrop 5s forwards;
+  animation-iteration-count: infinite;
 }
 
 @keyframes ballDrop {
+  0% {
+    transform: translate(0, 30px) rotate(-270deg) scale(0.5);
+  }
+
   60% {
-    transform: translate(0, 20px) rotate(-180deg) scale(0.5);
+    transform: translate(0) rotate(0deg) scale(1);
+    opacity: 1;
   }
 
   100% {
